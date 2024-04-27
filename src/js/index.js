@@ -1,6 +1,7 @@
 import "../styles/index.css";
 import "../js/menu.js";
 import { menu } from "../js/menu.js";
+import cherryTreeImage from "../assets/cherry-tree.jpg";
 
 const contentSection = document.querySelector("#content");
 const headerBtn = document.querySelector(".tabs");
