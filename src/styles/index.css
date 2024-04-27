@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --page-color: #f3ecf1;
+  --header-color: #f3dcec;
+}
+
+body {
+  min-height: 1000vh;
+  background-color: var(--page-color);
+}
+
+header {
+  position: relative;
+  background-color: var(--header-color);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.516);
+  z-index: 100;
+}
+
+img {
+  width: 350px;
+  position: fixed;
+  left: 5vw;
+  top: 30vh;
+  opacity: 80%;
+}
