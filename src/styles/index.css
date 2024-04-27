@@ -6,11 +6,17 @@
 
 :root {
   --page-color: #f3ecf1;
-  --header-color: #f3dcec;
+  --header-color: #af6c89;
+  --header-height: 10vh;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/Karla-VariableFont_wght.woff2");
 }
 
 body {
-  min-height: 1000vh;
+  min-height: 100vh;
   background-color: var(--page-color);
 }
 
@@ -19,12 +25,143 @@ header {
   background-color: var(--header-color);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.516);
   z-index: 100;
+  height: var(--header-height);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
 }
 
-img {
+.cherry-tree {
   width: 350px;
-  position: fixed;
+  position: absolute;
   left: 5vw;
   top: 30vh;
   opacity: 80%;
+  transition: transform 0.2s;
+}
+
+.cherry-tree:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.restaurant-name {
+  font-size: 1.8rem;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+}
+
+.tabs {
+  height: 100%;
+  display: flex;
+  gap: 2vw;
+}
+
+.tabs button {
+  height: 100%;
+  font-size: 1.5rem;
+  width: 8vw;
+  background-color: inherit;
+  border: none;
+  transition: border 0.2s;
+}
+
+.tabs button:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.about {
+  display: flex;
+
+  height: 50vh;
+  width: 60vw;
+
+  margin-left: 20vw;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "karla", sans-serif;
+}
+
+.text {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+#content {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-text {
+  font-size: 5rem;
+  font-family: "karla", sans-serif;
+  font-weight: bold;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  width: 40vw;
+  height: 70vh;
+  margin-bottom: 10vh;
+
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5vw;
+}
+
+.right {
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh;
+  gap: 2vh;
+}
+
+.right img {
+  width: 20vw;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.food-name {
+  font-weight: bold;
+  font-family: "karla";
+}
+
+.food-description {
+  font-size: 1.1rem;
 }
